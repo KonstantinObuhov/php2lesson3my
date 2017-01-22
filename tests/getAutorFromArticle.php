@@ -2,7 +2,7 @@
 
 require __DIR__.'/../autoload.php';
 
-$article = \App\Models\Article::findById(12);
+$article = \App\Models\Article::findById(28);
 $author = $article->author;
 
 assert(is_object($author));
