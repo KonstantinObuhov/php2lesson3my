@@ -8,5 +8,3 @@ $view->news = \App\Models\Article::findAll();
 echo $view->render(
     __DIR__ . '/App/Templates/index.php'
 );
-
-//var_dump(isset($view->news));

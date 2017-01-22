@@ -2,6 +2,13 @@
 
 require __DIR__ . '/../autoload.php';
 
+$view = new \App\View();
+$view->news = \App\Models\Article::findAll();
+
+echo $view->render(
+    __DIR__ . '/NewsTemplatePanel.php'
+);
+
 /*При вызове метода незнакомого класса запускается функция __autoload
 из файла autoload.php и делает require нужного нам класса
 */
@@ -11,8 +18,3 @@ require __DIR__ . '/../autoload.php';
 //$data = new \App\Models\Author;
 //echo '<pre>';
 //$data = \App\Models\Article::findById(1);
-//var_dump($data);
-//echo '<br>';
-
-$news = \App\Models\Article::findAll();
-include __DIR__ . '/NewsTemplatePanel.php';

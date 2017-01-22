@@ -17,7 +17,7 @@ class Article
     public $text;
     public $author_id;
 
-    protected $relations = [
+    protected static $relations = [
         'author' => [
             'field_name' => 'author_id',
             'class' => Author::class,

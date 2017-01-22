@@ -76,12 +76,11 @@ abstract class Model
     public function save()
     {
         if(is_null($this->id)) {
-//            $this->insert();
-//            return $this;
-            return 1;
+            $this->insert();
+            return $this;
+            return $this->insert();
         } else {
-//            return $this->update();
-            return 2;
+            return $this->update();
         }
     }
 

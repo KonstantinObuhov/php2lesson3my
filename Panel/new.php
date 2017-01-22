@@ -2,6 +2,9 @@
 
 require __DIR__ . '/../autoload.php';
 
-$article = new \App\Models\Article;
+$view = new \App\View();
+$view->article = new \App\Models\Article;
 
-include __DIR__ . '/EditorTemplate.php';
+echo $view->render(
+    __DIR__ . '/EditorTemplate.php'
+);

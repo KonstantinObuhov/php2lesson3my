@@ -10,5 +10,5 @@ if (isset($_POST['id'])) {
 $article->title = $_POST['title'];
 $article->text = $_POST['text'];
 $article->author_id = $_POST['author_id'];
-var_dump($article->save());
-//header('Location: /Panel/index.php');
+$article->save();
+header('Location: /Panel/index.php');
